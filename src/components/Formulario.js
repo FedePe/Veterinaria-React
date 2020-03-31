@@ -12,8 +12,11 @@ const Formulario = () => {
     });
 
     // Funcion que se ejecuta cada vez que el usuario escribe en un input
-    const actualizarState = () => {
-        console.log('escribiendo...')
+    const actualizarState = e => {
+        actualizarCita({
+            ...cita,
+            [e.target.name] : e.target.value
+        })
     }
     
     return ( 
@@ -32,7 +35,7 @@ const Formulario = () => {
                 <label>Nombre Dueño</label>
                 <input 
                     type="text"
-                    name="propietarop"
+                    name="propietario"
                     className="u-full-width"
                     placeholder="Nombre Dueño de la Mascota"
                     onChange={actualizarState}
