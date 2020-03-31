@@ -37,6 +37,11 @@ const Formulario = () => {
                     className="u-full-width"
                     name="sintomas"
                 />
+                <button 
+                    type="submit"
+                    className="u-full-width button-primary"
+                >Agregar Cita
+                </button>
             </form>
 
         </Fragment>
