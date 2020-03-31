@@ -19,11 +19,28 @@ const Formulario = () => {
         })
     }
     
+    // Extraer los valores
+    const { mascota, propietario, fecha, hora, sintomas } = cita;
+
+    // Cuando el usuario presiona agregar cita
+    const submitCita = e => {
+        e.preventDefault();
+        
+        // Validar
+
+        // Asignar un ID
+
+        // Crear la cita
+
+        //Reiniciar el form
+    }
+
     return ( 
         <Fragment>
             <h2>Crear Cita</h2>
-
-            <form>
+            <form                 
+                onSubmit = {submitCita}
+            >
                 <label>Nombre Mascota</label>
                 <input 
                     type="text"
@@ -31,6 +48,7 @@ const Formulario = () => {
                     className="u-full-width"
                     placeholder="Nombre Mascota"
                     onChange={actualizarState}
+                    value={mascota}
                 />
                 <label>Nombre Dueño</label>
                 <input 
@@ -39,6 +57,7 @@ const Formulario = () => {
                     className="u-full-width"
                     placeholder="Nombre Dueño de la Mascota"
                     onChange={actualizarState}
+                    value={propietario}
                 />
                 <label>Fecha</label>
                 <input 
@@ -46,6 +65,7 @@ const Formulario = () => {
                     name="fecha"
                     className="u-full-width"
                     onChange={actualizarState}
+                    value={fecha}
                 />
                 <label>Hora</label>
                 <input 
@@ -53,12 +73,14 @@ const Formulario = () => {
                     name="hora"
                     className="u-full-width"
                     onChange={actualizarState}
+                    value={hora}
                 />
                 <label>Sintomas</label>
                 <textarea 
                     className="u-full-width"
                     name="sintomas"
                     onChange={actualizarState}
+                    value={sintomas}
                 />
                 <button 
                     type="submit"
